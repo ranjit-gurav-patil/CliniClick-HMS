@@ -15,7 +15,7 @@ export default function Sidebar({ activePage }) {
 
   const handleLogout = () => {
     localStorage.removeItem('user');
-    window.location.href = '/'; 
+    navigate('/');
   };
 
   const toggleMenu = (menu) => {
