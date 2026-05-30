@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+// CHANGE HERE: Imported HashRouter instead of BrowserRouter
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Auth/Login';
 import LandingPage from './pages/LandingPage';
 import DashboardHome from './pages/Dashboard/Home';
@@ -14,6 +15,7 @@ function App() {
   const isAuthenticated = !!user; // Converts it to a strict true/false boolean
 
   return (
+    // Because we imported HashRouter 'as Router' above, this tag stays exactly the same!
     <Router>
       <Routes>
         {/* The Landing Page Route: If logged in, go to dashboard. If not, show marketing page. */}
@@ -49,20 +51,16 @@ function App() {
           path="/PatientList" 
           element={isAuthenticated ? <PatientList /> : <Navigate to="/" replace />} 
         />
-<Route 
-  path="/appointments/create" 
-  element={isAuthenticated ? <CreateAppointment /> : <Navigate to="/" replace />} 
-/>
-<Route 
-  path="/AppointmentsList" 
-  element={isAuthenticated ? <AppointmentsList /> : <Navigate to="/" replace />} 
-/>
+        <Route 
+          path="/appointments/create" 
+          element={isAuthenticated ? <CreateAppointment /> : <Navigate to="/" replace />} 
+        />
+        <Route 
+          path="/AppointmentsList" 
+          element={isAuthenticated ? <AppointmentsList /> : <Navigate to="/" replace />} 
+        />
       </Routes>
-     
-
     </Router>
-     
-        
   );
 }
 
