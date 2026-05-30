@@ -70,9 +70,9 @@ export default function LandingPage() {
             <img src={logo} alt="CliniClick"  />
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-600">
-            <a href="#features" className="hover:text-sky-600 transition-colors">Features</a>
-            <a href="#how-it-works" className="hover:text-sky-600 transition-colors">How it Works</a>
-            <a href="#pricing" className="hover:text-sky-600 transition-colors">Pricing</a>
+            <Link to="/features" className="hover:text-sky-600 transition-colors">Features</Link>
+            <Link to="/how-it-works" className="hover:text-sky-600 transition-colors">How it Works</Link>
+            <Link to="/pricing" className="hover:text-sky-600 transition-colors">Pricing</Link>
             <Link to="/login" className="text-slate-600 hover:text-sky-600 transition-colors ml-4 border-l border-slate-300 pl-8">Sign In</Link>
             <Link to="/register" className="bg-sky-600 text-white px-6 py-2.5 rounded-full hover:bg-sky-500 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-sky-500/30">
               Get Started
@@ -108,9 +108,9 @@ export default function LandingPage() {
             <Link to="/register" className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white text-lg font-bold rounded-full hover:bg-slate-800 transition-all transform hover:scale-105 shadow-xl shadow-slate-900/20">
               Start your free trial
             </Link>
-            <a href="#pricing" className="w-full sm:w-auto px-8 py-4 bg-white/80 backdrop-blur-md text-slate-900 text-lg font-bold rounded-full border border-slate-200 hover:bg-white transition-all shadow-sm">
+            <Link to="/pricing" className="w-full sm:w-auto px-8 py-4 bg-white/80 backdrop-blur-md text-slate-900 text-lg font-bold rounded-full border border-slate-200 hover:bg-white transition-all shadow-sm">
               View Pricing
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -270,17 +270,17 @@ export default function LandingPage() {
           <div>
             <h4 className="text-white font-bold mb-4">Product</h4>
             <ul className="space-y-3">
-              <li><a href="#features" className="hover:text-sky-400 transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-sky-400 transition-colors">Pricing</a></li>
+              <li><Link to="/features" className="hover:text-sky-400 transition-colors">Features</Link></li>
+              <li><Link to="/pricing" className="hover:text-sky-400 transition-colors">Pricing</Link></li>
               <li><Link to="/register" className="hover:text-sky-400 transition-colors">Sign Up</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Support</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Terms of Service</a></li>
+              <li><Link to="/" className="hover:text-sky-400 transition-colors">Contact Us</Link></li>
+              <li><Link to="/" className="hover:text-sky-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/" className="hover:text-sky-400 transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
